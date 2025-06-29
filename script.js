@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
                         let baseShadow = window.getComputedStyle(content).getPropertyValue('box-shadow').split(',')[0].trim();
                          if (baseShadow === "none") baseShadow = "0 10px 30px rgba(0, 0, 0, 0.1)"; // Fallback
                         content.style.boxShadow = `${baseShadow}, 0 0 ${glowIntensity}px rgba(230, 25, 25, 0.${Math.round(glowIntensity)})`;
