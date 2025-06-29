@@ -518,7 +518,12 @@ nav ul li:hover::after {
 
 .node-content h3 a {
     text-decoration: none;
-    color: white;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.node-content h3 a:hover {
+    color: var(--highlight-color);
 }
 
 .node-content p {
