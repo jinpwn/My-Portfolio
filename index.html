@@ -1,310 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0xblivion | Web101</title>
+    <title>Grant Dale Hortelano | 0xblivion</title>
+    
+    <!-- Fonts: Space Grotesk (Display) + Inter (Body) + Space Mono (Code) + Caveat (Handwriting) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+      <defs>
+        <filter id="marker-texture" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="background-wrapper" id="parallaxBg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
     <nav>
-        <div class="logo-container">
-            <span class="logo-icon">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/free-zero-icon-download-in-svg-png-gif-file-formats--number-numeric-numerous-typography-pack-sign-symbols-icons-4078305.png?f=webp&w=256" alt="0xblivion Logo" onerror="this.src='https://placehold.co/30x30/e61919/ffffff?text=0x'; this.onerror=null;">
-            </span>
-        </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round">
-                    <div class="sun-icon"><img src="https://static.thenounproject.com/png/4808961-200.png" alt="Light mode" onerror="this.src='https://placehold.co/14x14/cccccc/333333?text=S'; this.onerror=null;"></div>
-                    <div class="moon-icon"><img src="https://cdn-icons-png.freepik.com/512/6714/6714978.png" alt="Dark mode" onerror="this.src='https://placehold.co/14x14/424242/f0f0f0?text=M'; this.onerror=null;"></div>
-                </div>
-            </label>
+        <div class="container nav-inner">
+            <a href="#" class="brand">0xblivion.</a>
+            <div class="nav-items">
+                <a href="#work">Ops</a>
+                <a href="#timeline">Log</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+            <button class="theme-btn" id="themeToggle" aria-label="Toggle Theme">
+                <i class="fas fa-adjust"></i>
+            </button>
         </div>
     </nav>
-    
-    <section id="home" class="main-content">
-        <h1 class="main-heading">Hell-o World!</h1>
-        <div class="content-layout">
-            <div class="profile-box">
-                <div class="profile-pic">
-                    <img src="https://raw.githubusercontent.com/zeroXblivion/My-Portfolio/refs/heads/main/oblivion.png" alt="Profile Picture" onerror="this.src='https://placehold.co/180x180/eeeeee/333333?text=Profile'; this.onerror=null;">
-                </div>
-                <div class="name-container">
-                    <span id="typewriter-name"></span>
-                </div>
-                <div class="bio">
-                    <p>Don't jump to conclusions if you are not done with enumeration.</p>
-                </div>
-            </div>
-            <div class="about-section">
-                <div class="about-text">
-                    <p>I'm <b>Grant Dale Hortelano,</b> also known online as <b>0xblivion.</b> I'm a self-taught cybersecurity enthusiast who enjoys solving CTFs, learning about real-world attack techniques, and building tools that help me understand how systems can be exploited.</p>
-                    <p>Most of my time goes into hands-on practice through labs and challenges. I document what I learn, work on personal projects, and constantly try to improve my skills.</b></p>
-                    <p>Outside of cybersecurity, I like gaming, editing videos, listening to music, and customizing Linux. I take things one step at a time and try to learn something useful every day.                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects" class="work-with-section">
-        <h2 class="work-with-heading">My Toolkit</h2>
-        <div class="tech-slider-container">
-            <div class="tech-slider">
-                <div class="tech-item">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png" alt="Python" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Py'; this.onerror=null;">
-                    <span>Python</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://devopedia.org/images/article/135/5996.1544439861.png" alt="Go" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Go'; this.onerror=null;">
-                    <span>Golang</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png" alt="Java" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Java'; this.onerror=null;">
-                    <span>Java</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/2048px-Kali-dragon-icon.svg.png" alt="Linux" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Lin'; this.onerror=null;">
-                    <span>Linux</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://avatars.githubusercontent.com/u/144470396?v=4" alt="Netexec" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=NetEx'; this.onerror=null;">
-                    <span>Netexec</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://miro.medium.com/v2/resize:fit:1000/1*E0I-QO-1U8yROC6FbUyHGA.png" alt="Bloodhound" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=BH'; this.onerror=null;">
-                    <span>BloodHound</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://wazuh.com/uploads/2023/03/sliver-c2-circle.png" alt="Sliver" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Sliv'; this.onerror=null;">
-                    <span>Sliver C2</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://static.wikitide.net/zenithwiki/0/0d/IDAIcon.png" alt="IDA" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=IDA'; this.onerror=null;">
-                    <span>IDA Pro</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://pbs.twimg.com/profile_images/580131056629735424/2ENTk2K2_400x400.png" alt="Metasploit" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Metasploit'; this.onerror=null;">
-                    <span>Metasploit</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/2048px-Ghidra_logo.svg.png" alt="Ghidra" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Ghidra'; this.onerror=null;">
-                    <span>Ghidra</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://miro.medium.com/v2/resize:fit:710/1*KMYIE0A-u-DhaMm9N2ImlA.png" alt="Burpsuite" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Burpsuite'; this.onerror=null;">
-                    <span>Burpsuite</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Wireshark_icon_new.png" alt="Wireshark" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Wireshark'; this.onerror=null;">
-                    <span>Wireshark</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://dashboard.snapcraft.io/site_media/appmedia/2023/10/impacket-logo.png" alt="Impacket" onerror="this.src='https://placehold.co/60x60/eeeeee/333333?text=Impacket'; this.onerror=null;">
-                    <span>Impacket-tools</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="timeline" class="timeline-section">
-        <div class="timeline-line"></div>
-        <div class="timeline-header">
-            <h2>Skills</h2>
-        </div>
-        <div class="timeline-nodes">
-            <div class="node node-left" data-delay="100">
-                <div class="node-content">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png" alt="Python" onerror="this.src='https://placehold.co/50x50/eeeeee/333333?text=Py'; this.onerror=null;">
-                    <h3>Python</h3>
-                    <p>Used for scripting, automation, and exploit development</p>
-                </div>
-                <div class="node-connector"></div>
-            </div>
-            <div class="node node-right" data-delay="300">
-                <div class="node-connector"></div>
-                <div class="node-content">
-                    <img src="https://www.dockhunt.com/_next/image?url=https%3A%2F%2Fdockhunt-images.nyc3.cdn.digitaloceanspaces.com%2Ff5f43386-11d9-4978-b8f0-1497a875881e&w=384&q=75" alt="Burpsuite Pro" onerror="this.src='https://placehold.co/50x50/eeeeee/333333?text=Burpsuite'; this.onerror=null;">
-                    <h3>Burpsuite Pro</h3>
-                    <p>Utilized for testing web apps and finding vulnerabilities</p>
-                </div>
-            </div>
-            <div class="node node-left" data-delay="500">
-                <div class="node-content">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Wireshark_icon_new.png" alt="Wireshark" onerror="this.src='https://placehold.co/50x50/eeeeee/333333?text=Wireshark'; this.onerror=null;">
-                    <h3>Wireshark / TCPdump</h3>
-                    <p>Applied to analyze network traffic and inspect packets</p>
-                </div>
-                <div class="node-connector"></div>
-            </div>
-            <div class="node node-right" data-delay="700">
-                <div class="node-connector"></div>
-                <div class="node-content">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/2048px-Kali-dragon-icon.svg.png" alt="Linux" onerror="this.src='https://placehold.co/50x50/eeeeee/333333?text=Linux'; this.onerror=null;">
-                    <h3>Kali Linux</h3>
-                    <p>Primary Operating System for penetration testing and everyday security tasks</p>
-                </div>
-            </div>
-            <div class="node node-left" data-delay="900">
-                <div class="node-content">
-                    <img src="https://www.freeiconspng.com/uploads/active-directory-icon-png-3.png" alt="Active Directory" onerror="this.src='https://placehold.co/50x50/eeeeee/333333?text=Active'; this.onerror=null;">
-                    <h3>Active Directory</h3>
-                    <p>Knowledgeable in AD enumeration, exploitation, and persistence techniques.</p>
-                </div>
-                <div class="node-connector"></div>
-            </div>
-            <div class="node node-right" data-delay="1000">
-                <div class="node-connector"></div>
-                <div class="node-content">
-                    <img src="https://static.wikitide.net/zenithwiki/0/0d/IDAIcon.png" alt="IDA Pro" onerror="this.src='https://placehold.co/50x50/eeeeee/333333?text=IDA'; this.onerror=null;">
-                    <h3>IDA Pro</h3>
-                    <p>Used for reverse engineering and analyzing binary behavior</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline-header">
-            <h2>Certificates</h2>
-        </div>
-        <div class="timeline-nodes">
-            <div class="node node-left" data-delay="200">
-                <div class="node-content">
-                    <div class="cert-container">
-                        <div class="cert-icon">
-                            <img src="https://app.hackthebox.com/images/icons/ic-prolabs/ic-p.o.o-overview.png" alt="P.O.O Icon" onerror="this.src='https://placehold.co/70x70/eeeeee/333333?text=Cert'; this.onerror=null;">
-                        </div>
-                        <div class="cert-details">
-                            <h3>P.O.O | HackTheBox Red Team Operator Level I</h3>
-                            <p>Gained practical experience from P.O.O., a focused Active Directory lab designed to test real-world skills in enumeration, lateral movement, and privilege escalation. Navigating its modern AD environment helped strengthen offensive techniques and persistence strategies through hands-on challenges.</p>
-                            <button class="view-cert-btn" data-cert="certificates/POO-certificate.pdf">View Certification</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="node-connector"></div>
-            </div>
-            <div class="node node-right" data-delay="400">
-                <div class="node-connector"></div>
-                <div class="node-content">
-                    <div class="cert-container">
-                        <div class="cert-icon">
-                            <img src="https://app.hackthebox.com/images/icons/ic-prolabs/ic-dante-overview.svg" alt="Dante Icon" onerror="this.src='https://placehold.co/70x70/eeeeee/333333?text=Cert'; this.onerror=null;">
-                        </div>
-                        <div class="cert-details">
-                            <h3>Dante | HackTheBox Red Team Operator Level I</h3>
-                            <p>Completed Dante, a structured Pro Lab that introduced core penetration testing techniques in a modern Linux environment. Gained hands-on experience using industry-standard tools and workflows, helping build a solid foundation in offensive security operations.</p>
-                            <button class="view-cert-btn" data-cert="certificates/Dante-certificate.pdf">View Certification</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="node node-left" data-delay="600">
-                <div class="node-content">
-                    <div class="cert-container">
-                        <div class="cert-icon">
-                            <img src="https://app.hackthebox.com/images/icons/ic-prolabs/ic-zephyr-overview.svg" alt="Zephyr Icon" onerror="this.src='https://placehold.co/70x70/eeeeee/333333?text=Cert'; this.onerror=null;">
-                        </div>
-                        <div class="cert-details">
-                            <h3>Zephyr | HackTheBox Red Team Operator Level II</h3>
-                            <p>Completed Zephyr, an enterprise-grade lab focused on exploiting real-world Active Directory misconfigurations. Gained hands-on red team experience through challenges involving credential abuse, privilege escalation, and domain enumeration. Strengthened AD exploitation skills in a simulated corporate environment.</p>
-                            <button class="view-cert-btn" data-cert="certificates/Zephyr-certificate.pdf">View Certification</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="node-connector"></div>
-            </div>
-            <div class="node node-right" data-delay="800">
-                <div class="node-connector"></div>
-                <div class="node-content">
-                    <div class="cert-container">
-                        <div class="cert-icon">
-                            <img src="https://app.hackthebox.com/images/icons/ic-prolabs/ic-offshore-overview.svg" alt="Offshore Icon" onerror="this.src='https://placehold.co/70x70/eeeeee/333333?text=Cert'; this.onerror=null;">
-                        </div>
-                        <div class="cert-details">
-                            <h3>Offshore | HackTheBox Red Team Operator Level II</h3>
-                            <p>Completed Offshore, a dynamic Pro Lab offering a mix of real-world scenarios for both offensive and defensive security. Gained hands-on experience across a broad range of techniques, strengthening skills relevant to professional red team operations and internal security assessments.</p>
-                            <button class="view-cert-btn" data-cert="certificates/Offshore-certificate.pdf">View Certification</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="node node-left" data-delay="1000">
-                <div class="node-content">
-                    <div class="cert-container">
-                        <div class="cert-icon">
-                            <img src="https://silofy.gallerycdn.vsassets.io/extensions/silofy/hackthebox/0.2.9/1629722910669/Microsoft.VisualStudio.Services.Icons.Default" alt="Hackthebox Icon" onerror="this.src='https://placehold.co/70x70/eeeeee/333333?text=Cert'; this.onerror=null;">
-                        </div>
-                        <div class="cert-details">
-                            <h3>HackThebox Student Transcript</h3>
-                            <p>A record of completed HTB Academy modules, covering topics such as network security, web exploitation, Active Directory, privilege escalation, and penetration testing fundamentals</p>
-                            <button class="view-cert-btn" data-cert="certificates\HTB Academy Student Transcript.pdf">View Transcript</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="node-connector"></div>
-            </div>
-        </div>
-        
-        <div id="pdf-viewer-modal" class="pdf-viewer-modal">
-            <div class="pdf-viewer-container">
-                <div class="pdf-viewer-header">
-                    <span class="pdf-title">Certificate</span>
-                    <button class="pdf-close-btn">&times;</button>
-                </div>
-                <div class="pdf-viewer-content">
-                    <iframe id="pdf-iframe" src="" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline-header">
-            <h2>Projects</h2>
-        </div>
-        <div class="timeline-nodes">
-            <div class="node node-right" data-delay="300">
-                <div class="node-connector"></div>
-                <div class="node-content">
-                    <h3><a href="https://github.com/zeroXblivion/Gem" target="_blank">Gem</a></h3>
-                    <p>An IDA Pro plugin that leverages Google's Gemini AI to automatically suggest meaningful names for functions and labels based on their code context.</p>
-                </div>
-            </div>
-            <div class="node node-left" data-delay="600">
-                <div class="node-content">
-                    <h3><a href="https://github.com/zeroXblivion/NTP-Timeroast-Attack-Tool" target="_blank">NTP Timeroast Attack Tool</a></h3>
-                    <p>Extract and crack domain controller machine account password hashes via NTP MS-SNTP authentication.</p>
-                </div>
-                <div class="node-connector"></div>
-            </div>
 
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Hell-o<br>World!</h1>
+                    <p class="hero-sub">
+                        I am Grant Dale (0xblivion), a security researcher focused on offensive work and engineering.
+                    </p>
+                    
+                    <div class="hero-socials">
+                        <a href="https://github.com/zeroXblivion" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/0xblivion" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://app.hackthebox.com/profile/1244905" target="_blank" title="HackTheBox"><i class="fas fa-cube"></i></a>
+                        <a href="https://0xblivion.dev/" target="_blank" title="Website"><i class="fas fa-link"></i></a>
+                    </div>
+
+                    <!-- Pen Button -->
+                    <a href="#contact" class="btn-marker">
+                        Ping Me
+                        <svg class="marker-svg" viewBox="0 0 100 60" preserveAspectRatio="none">
+                            <path class="marker-path" d="M 30 25 C 25 15 45 10 55 10 C 75 10 85 20 85 30 C 85 45 65 50 50 50 C 35 50 20 40 20 30 C 20 15 40 10 60 12 C 80 15 90 25 85 40 C 80 55 55 58 40 55 C 25 52 15 40 20 30 C 25 22 40 18 55 20" />
+                        </svg>
+                    </a>
+
+                </div>
+                <div class="hero-image">
+                    <div class="profile-wrapper">
+                        <img src="https://raw.githubusercontent.com/zeroXblivion/My-Portfolio/refs/heads/main/oblivion.png" alt="Profile" class="profile-img">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2 class="contact-heading">Contact Me</h2>
-        <div class="contact-container">
-            <p>Interested in working with me as a Penetration Tester or Red Teamer? Let’s connect.</p>
-            <div class="contact-links">
-                <a href="mailto:grant.tricking711@passfwd.com" class="contact-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/zeroXblivion" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/0xblivion" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://app.hackthebox.com/profile/1244905" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Hack The Box"><i class="fa-solid fa-cube"></i></a>
-                <a href="https://tryhackme.com/p/0xblivion" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe">
-                    <img src="https://tryhackme.com/img/logo/THMlogo-gray_scale.png" alt="TryHackMe" class="contact-icon-img" onerror="this.src='https://placehold.co/28x28/eeeeee/333333?text=THM'; this.onerror=null;">
+    <!-- Toolkit Marquee -->
+    <section class="toolkit-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="tool-item"><img src="https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png" alt="Python"><span class="tool-name">Python</span></div>
+                <div class="tool-item"><img src="https://devopedia.org/images/article/135/5996.1544439861.png" alt="Go"><span class="tool-name">Golang</span></div>
+                <div class="tool-item"><img src="https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png" alt="Java"><span class="tool-name">Java</span></div>
+                <div class="tool-item"><img src="https://indianwolverine.github.io/img/arch.png" alt="Linux"><span class="tool-name">Linux</span></div>
+                <div class="tool-item"><img src="https://avatars.githubusercontent.com/u/144470396?v=4" alt="Netexec"><span class="tool-name">Netexec</span></div>
+                <div class="tool-item"><img src="https://miro.medium.com/v2/resize:fit:1000/1*E0I-QO-1U8yROC6FbUyHGA.png" alt="Bloodhound"><span class="tool-name">BloodHound</span></div>
+                <div class="tool-item"><img src="https://academy.hackthebox.com/storage/badges/1117e47aadf0097836a0027223d2c877/logo.png" alt="Sliver"><span class="tool-name">Sliver</span></div>
+                <div class="tool-item"><img src="https://static.wikitide.net/zenithwiki/0/0d/IDAIcon.png" alt="IDA"><span class="tool-name">IDA Pro</span></div>
+                <div class="tool-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/2048px-Ghidra_logo.svg.png" alt="Ghidra"><span class="tool-name">Ghidra</span></div>
+                <div class="tool-item"><img src="https://miro.medium.com/v2/resize:fit:710/1*KMYIE0A-u-DhaMm9N2ImlA.png" alt="Burpsuite"><span class="tool-name">Burpsuite</span></div>
+                <div class="tool-item"><img src="https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png" alt="Python"><span class="tool-name">Python</span></div>
+                <div class="tool-item"><img src="https://devopedia.org/images/article/135/5996.1544439861.png" alt="Go"><span class="tool-name">Golang</span></div>
+                <div class="tool-item"><img src="https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png" alt="Java"><span class="tool-name">Java</span></div>
+                <div class="tool-item"><img src="https://indianwolverine.github.io/img/arch.png" alt="Linux"><span class="tool-name">Linux</span></div>
+                <div class="tool-item"><img src="https://avatars.githubusercontent.com/u/144470396?v=4" alt="Netexec"><span class="tool-name">Netexec</span></div>
+                <div class="tool-item"><img src="https://miro.medium.com/v2/resize:fit:1000/1*E0I-QO-1U8yROC6FbUyHGA.png" alt="Bloodhound"><span class="tool-name">BloodHound</span></div>
+                <div class="tool-item"><img src="https://academy.hackthebox.com/storage/badges/1117e47aadf0097836a0027223d2c877/logo.png" alt="Sliver"><span class="tool-name">Sliver</span></div>
+                <div class="tool-item"><img src="https://static.wikitide.net/zenithwiki/0/0d/IDAIcon.png" alt="IDA"><span class="tool-name">IDA Pro</span></div>
+                <div class="tool-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/2048px-Ghidra_logo.svg.png" alt="Ghidra"><span class="tool-name">Ghidra</span></div>
+                <div class="tool-item"><img src="https://miro.medium.com/v2/resize:fit:710/1*KMYIE0A-u-DhaMm9N2ImlA.png" alt="Burpsuite"><span class="tool-name">Burpsuite</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="index-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Offensive Work</span>
+                <span class="section-number">01</span>
+            </div>
+            <div class="status-bar">
+                <div class="status-item"><span class="status-indicator"></span><span>Status: Active</span></div>
+                <div class="status-item"><span>HTB Rank: PRO Hacker</span></div>
+                <div class="status-item"><span>Exp: 4+ Yrs</span></div>
+            </div>
+            <div class="index-list">
+                <a href="https://0xblivion.dev" target="_blank" class="index-row">
+                    <span class="index-id">000</span>
+                    <div class="index-content">
+                        <h3>Research Blog</h3>
+                        <p>A dedicated space where I publish CTF writeups, research notes, exploit development findings, and deep-dive technical articles.</p>
+                    </div>
+                    <div class="index-meta"><div class="meta-tags">CTF / BLOG / Offensive Security</div><i class="fas fa-arrow-right index-arrow"></i></div>
+                </a>
+
+                <a href="https://github.com/zeroXblivion/Gem" target="_blank" class="index-row">
+                    <span class="index-id">001</span>
+                    <div class="index-content">
+                        <h3>Gem for IDA Pro</h3>
+                        <p>Stop staring at sub_401000. AI-powered function renaming for IDA Pro that intelligently labels subroutines and variables.</p>
+                    </div>
+                    <div class="index-meta"><div class="meta-tags">Python / RE / AI</div><i class="fas fa-arrow-right index-arrow"></i></div>
+                </a>
+                <a href="https://github.com/zeroXblivion/NTP-Timeroast-Attack-Tool" target="_blank" class="index-row">
+                    <span class="index-id">002</span>
+                    <div class="index-content">
+                        <h3>NTP Timeroast</h3>
+                        <p>A cryptographic tool to extract and crack domain controller machine account password hashes via NTP MS-SNTP authentication.</p>
+                    </div>
+                    <div class="index-meta"><div class="meta-tags">Crypto / Exploit</div><i class="fas fa-arrow-right index-arrow"></i></div>
                 </a>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Timeline -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Log / Certification</span>
+                <span class="section-number">02</span>
+            </div>
+            <div class="timeline-list">
+                <div class="timeline-row">
+                    <span class="t-year">2025</span>
+                    <div class="t-content">
+                        <h3>CRTA - Red Team Analyst</h3>
+                        <p>Web and network exploitation, network pivoting, Kerberos attacks, and full red team cycles.</p>
+                    </div>
+                    <div class="t-action"><button onclick="openPdf('certificates/Zephyr-certificate.pdf')"><i class="fas fa-eye"></i></button></div>
+                </div>
+                <div class="timeline-row">
+                    <span class="t-year">2024</span>
+                    <div class="t-content">
+                        <h3>Zephyr: Red Team Operator II</h3>
+                        <p>Enterprise AD exploitation, credential attacks, and internal lateral movement.</p>
+                    </div>
+                    <div class="t-action"><button onclick="openPdf('certificates/Zephyr-certificate.pdf')"><i class="fas fa-eye"></i></button></div>
+                </div>
+                <div class="timeline-row">
+                    <span class="t-year">2024</span>
+                    <div class="t-content">
+                        <h3>Offshore: Red Team Operator II</h3>
+                        <p>Advanced AD attacks, lateral movement, and multi-stage red team scenarios.</p>
+                    </div>
+                    <div class="t-action"><button onclick="openPdf('certificates/Zephyr-certificate.pdf')"><i class="fas fa-eye"></i></button></div>
+                </div>
+                <div class="timeline-row">
+                    <span class="t-year">2024</span>
+                    <div class="t-content">
+                        <h3>P.O.O: Red Team Operator I</h3>
+                        <p>Foundational AD enumeration and lateral movement techniques.</p>
+                    </div>
+                    <div class="t-action"><button onclick="openPdf('certificates/POO-certificate.pdf')"><i class="fas fa-eye"></i></button></div>
+                </div>
+                <div class="timeline-row">
+                    <span class="t-year">2024</span>
+                    <div class="t-content">
+                        <h3>Dante: Pro Lab Red Team Operator I</h3>
+                        <p>Linux enumeration, privilege escalation, service exploitation.</p>
+                    </div>
+                    <div class="t-action"><button onclick="openPdf('certificates/Dante-certificate.pdf')"><i class="fas fa-eye"></i></button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container" style="text-align: center;">
+            <h2>Say Hell-o!</h2>
+            <p style="margin: 20px 0 30px; color: var(--text-secondary);">Open to penetration testing engagements.</p>
+            
+            <div class="contact-wrapper">
+                <button onclick="copyEmail(this)" class="contact-trigger-btn">
+                    <i class="fas fa-envelope"></i><span>Get in Touch</span>
+                </button>
+                
+                <div class="hand-hint">
+                    <span class="hint-text">click to copy</span>
+                    <svg class="hint-svg" viewBox="0 0 100 60" preserveAspectRatio="none">
+                        <!-- Curved arrow pointing left towards button -->
+                        <path class="hint-path" d="M 70 10 Q 30 35 5 35" />
+                        <!-- Arrowhead -->
+                        <path class="hint-path" d="M 15 28 L 5 35 L 15 42" />
+                    </svg>
+                </div>
+            </div>
+
+            <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 40px;">&copy; 2025 0xblivion.</p>
+        </div>
+    </footer>
+
+    <!-- PDF Modal -->
+    <div class="modal" id="pdfModal">
+        <div class="modal-content">
+            <div class="modal-header"><span>Document Viewer</span><button onclick="closePdf()">&times;</button></div>
+            <iframe id="pdfFrame" src="" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    </div>
 </body>
 </html>
